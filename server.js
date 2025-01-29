@@ -19,6 +19,9 @@ app.get('/', (req, res) => {
 // Use the "/informations" route
 app.use("/informations", info_router);
 
+app.listen(process.env.PORT, () => {
+     console.log(`Connected PORT: ${process.env.PORT}`);
+})
 // MongoDB connection
 mongoose.connect(process.env.MY_CONNECT)
      .then(() => {

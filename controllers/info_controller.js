@@ -15,8 +15,6 @@ const InfoController = {
           }
      },
      POST: async (req, res) => {
-          console.log(req.body);
-
           try {
                const newInformation = await InfoModel.create(req.body);
                res.status(201).json({ message: "Information added successfully!", data: newInformation });
